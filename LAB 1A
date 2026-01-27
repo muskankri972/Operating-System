@@ -1,0 +1,6 @@
+PROGRAM
+#include <stdio.h>
+int main() {
+int n, i, j;
+int bt[10], pr[10], p[10];
+int wt[10], tat[10], temp;
