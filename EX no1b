@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <dirent.h>
+
+int main()
+{
+    DIR *d;
+    struct dirent *entry;
+
+    /* open current directory */
+    d = opendir(".");
+
+    if (d == NULL)
+    {
+        printf("Directory cannot be opened\n");
+        return 1;
+    }
+    /* read directory entries */
+    printf("Directory contents:\n");
+    while ((entry = readdir(d)) != NULL)
+    {
+        printf("%s\n", entry->d_name);
+    }
+    /* close directory */
+    closedir(d);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+OUTPUT:
+~$ gcc Lab1b.c -o Lab1b
+~$ ./Lab1b
+Directory contents:
+.
+..
+sample.txt
+EXP04.term
+Lab2.c
+Lab1c.c
+.bash_profile
+Lab1b.c
+Lab1c
+Lab3.c
+.ssh
+.local
+Lab3
+.config
+Lab1a.c
+Lab4
+EXP01.term
+2026-02-06-file-1.term
+Lab4.c
+Lab1b
+.bashrc
+EXP03.term
+.cache
+.snapshots
+.smc
+EXP02.term
+Lab1a
