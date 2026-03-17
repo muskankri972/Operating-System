@@ -66,15 +66,12 @@ return 0;
 
 
 output:-
-~$ gcc lab06b.c -o labØ6b
-~$ ./lab06b
-Enter number of pages: 4
+~$ gcc lab06a.c -o labøбa
+~$./lab06a
+Enter number of pages: 3
 Enter page reference string:
-1
-2
 3
-4
-Enter number of frames:
-23
-Total Page Faults = 0
+22
+1
+Enter number of frames: 4
 
